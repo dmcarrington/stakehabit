@@ -1,0 +1,13 @@
+# Add project specific ignores here
+*.iml
+.idea/
+.gradle/
+build/
+*/build/
+local.properties
+*.keystore
+*.jks
+/app/release/
+captures/
+.externalNativeBuild/
+.cxx/

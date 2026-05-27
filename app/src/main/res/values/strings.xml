@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StakeHabit</string>
+    <string name="habits_tab">Habits</string>
+    <string name="staking_tab">Staking</string>
+    <string name="stats_tab">Stats</string>
+    <string name="settings_tab">Settings</string>
+</resources>
