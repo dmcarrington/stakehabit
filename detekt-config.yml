@@ -1,0 +1,79 @@
+# detekt configuration for StakeHabit
+# Builds on top of detekt's default config (buildUponDefaultConfig = true)
+# All rules not mentioned use defaults
+
+style:
+  active: true
+  MagicNumber:
+    active: true
+    ignoreNumbers:
+      - '-1'
+      - '0'
+      - '1'
+      - '2'
+      - '100'
+      - '1000'
+  MaxLineLength:
+    active: true
+    maxLineLength: 140
+  WildcardImport:
+    active: true
+    excludeImports:
+      - 'com.stakehabit.ui.theme.*'
+  ForbiddenComment:
+    active: true
+    values:
+      - 'FIXME'
+      - 'STOPSHIP'
+    allowedPatterns: ''
+  UnusedPrivateMember:
+    active: true
+  UnusedImports:
+    active: true
+
+complexity:
+  active: true
+  TooManyFunctions:
+    active: true
+    ignorePrivate: true
+    thresholdInFiles: 30
+    thresholdInClasses: 20
+    thresholdInInterfaces: 15
+    thresholdInObjects: 15
+  LongParameterList:
+    active: true
+    functionThreshold: 8
+    constructorThreshold: 10
+    ignoreDefaultParameters: true
+
+naming:
+  active: true
+  FunctionNaming:
+    active: true
+    ignoreAnnotated:
+      - 'Composable'
+
+coroutines:
+  active: true
+
+performance:
+  active: true
+
+potential-bugs:
+  active: true
+
+exceptions:
+  active: true
+
+empty-blocks:
+  active: true
+
+formatting:
+  active: false # ktlint handles formatting
+
+comments:
+  active: true
+  EndOfSentenceFormat:
+    active: false
+  OutdatedDocumentation:
+    active: true
