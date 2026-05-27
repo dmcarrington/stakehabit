@@ -14,5 +14,5 @@ import com.stakehabit.domain.model.Stake
 abstract class StakeHabitDatabase : RoomDatabase() {
     abstract fun habitDao(): HabitDao
     abstract fun checkInDao(): CheckInDao
-    abstract fun stakeDao(): StakeDao()
+    abstract fun stakeDao(): StakeDao
 }

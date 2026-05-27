@@ -2,8 +2,8 @@ package com.stakehabit.di
 
 import android.content.Context
 import androidx.room.Room
-import com.stakehabit.data.local.HabitDao
 import com.stakehabit.data.local.CheckInDao
+import com.stakehabit.data.local.HabitDao
 import com.stakehabit.data.local.StakeDao
 import com.stakehabit.data.local.StakeHabitDatabase
 import dagger.Module
@@ -19,13 +19,11 @@ object DatabaseModule {
 
     @Provides
     @Singleton
-    fun provideDatabase(@ApplicationContext context: Context): StakeHabitDatabase {
-        return Room.databaseBuilder(
-            context,
-            StakeHabitDatabase::class.java,
-            "stakehabit.db"
-        ).build()
-    }
+    fun provideDatabase(@ApplicationContext context: Context): StakeHabitDatabase = Room.databaseBuilder(
+        context,
+        StakeHabitDatabase::class.java,
+        "stakehabit.db"
+    ).build()
 
     @Provides
     fun provideHabitDao(db: StakeHabitDatabase): HabitDao = db.habitDao()

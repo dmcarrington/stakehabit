@@ -21,3 +21,9 @@ trim_trailing_whitespace = false
 ktlint_code_style = android_studio
 ktlint_standard_multiline-expression-wrapping = disabled
 ktlint_standard_function-signature = disabled
+# Compose conventions — composable functions use PascalCase
+ktlint_standard_function-naming = disabled
+# Single-class file naming not enforced for simplicity
+ktlint_standard_filename = disabled
+# Wildcard imports allowed for Compose (too many to enumerate)
+ktlint_standard_no-wildcard-imports = disabled

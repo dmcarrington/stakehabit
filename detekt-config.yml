@@ -22,7 +22,7 @@ style:
       - 'com.stakehabit.ui.theme.*'
   ForbiddenComment:
     active: true
-    values:
+    comments:
       - 'FIXME'
       - 'STOPSHIP'
     allowedPatterns: ''
@@ -68,8 +68,6 @@ exceptions:
 empty-blocks:
   active: true
 
-formatting:
-  active: false # ktlint handles formatting
 
 comments:
   active: true

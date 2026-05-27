@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>LongMethod:SettingsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun SettingsScreen()</ID>
+    <ID>MagicNumber:Theme.kt$0xFF121212</ID>
+    <ID>MagicNumber:Theme.kt$0xFF1E1E1E</ID>
+    <ID>MagicNumber:Theme.kt$0xFF4CAF50</ID>
+    <ID>MagicNumber:Theme.kt$0xFFE53935</ID>
+    <ID>MagicNumber:Theme.kt$0xFFE65100</ID>
+    <ID>MagicNumber:Theme.kt$0xFFF7931A</ID>
+    <ID>MagicNumber:Theme.kt$0xFFFAFAFA</ID>
+    <ID>MagicNumber:Theme.kt$0xFFFFB74D</ID>
+    <ID>MagicNumber:Theme.kt$0xFFFFD700</ID>
+    <ID>MatchingDeclarationName:Database.kt$StakeHabitDatabase : RoomDatabase</ID>
+    <ID>MatchingDeclarationName:StakeHabitApp.kt$BottomNavItem</ID>
+    <ID>WildcardImport:Daos.kt$import androidx.room.*</ID>
+    <ID>WildcardImport:Database.kt$import androidx.room.*</ID>
+    <ID>WildcardImport:HabitsScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:HabitsScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:SettingsScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:SettingsScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:StakingScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:StakingScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:StatsScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:StatsScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:Theme.kt$import androidx.compose.material3.*</ID>
+  </CurrentIssues>
+</SmellBaseline>
