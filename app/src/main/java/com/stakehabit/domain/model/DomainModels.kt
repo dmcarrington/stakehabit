@@ -1,11 +1,16 @@
 package com.stakehabit.domain.model
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.time.Instant
 
 /**
  * A habit that the user wants to build or break.
  */
+@Entity(tableName = "habits")
 data class Habit(
+    @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
     val name: String,
     val description: String = "",
@@ -27,7 +32,9 @@ enum class Frequency {
 /**
  * A single check-in for a habit on a given date.
  */
+@Entity(tableName = "habit_checkins")
 data class HabitCheckIn(
+    @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
     val habitId: Long,
     val date: String, // YYYY-MM-DD
@@ -48,13 +55,20 @@ enum class ProofType {
 /**
  * A financial stake placed on a habit.
  */
+@Entity(tableName = "stakes")
 data class Stake(
+    @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
     val habitId: Long,
     val amountSats: Long, // amount staked in satoshis
     val startDate: String, // YYYY-MM-DD
     val endDate: String?, // null = ongoing
-    val failureDestination: FailureDestination,
+    @ColumnInfo(name = "failure_destination_type")
+    val failureDestinationType: String,
+    @ColumnInfo(name = "failure_destination_address")
+    val failureDestinationAddress: String = "",
+    @ColumnInfo(name = "failure_destination_label")
+    val failureDestinationLabel: String = "",
     val paymentHash: String? = null, // Lightning invoice hash
     val isActive: Boolean = true,
     val createdAt: Instant = Instant.now()
